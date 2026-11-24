@@ -1,10 +1,10 @@
 /* ==========================================================
    GOLDREST - FRONTEND LIGADO À API
-   API: http://localhost:3000/api
+   API: https://goldrest1.onrender.com/api
    Não utiliza localStorage para dados operacionais.
 ========================================================== */
 
-const API_BASE = (window.GOLDREST_API_URL || "http://localhost:3000/api").replace(/\/$/, "");
+const API_BASE = (window.GOLDREST_API_URL || "https://goldrest1.onrender.com/api").replace(/\/$/, "");
 const TOKEN_KEY = "goldrest_token";
 const USER_KEY = "utilizadorLogado";
 let produtosCache = [], mesasCache = [], pedidosCache = [], vendasCache = [], funcionariosCache = [], stockCache = [], movimentosCache = [];
