@@ -1,0 +1,25 @@
+GOLDREST — registo multi-restaurante atualizado
+
+ALTERAÇÕES:
+- cadastrar.html pede o nome do restaurante.
+- js/app.js envia o nome do restaurante e valida palavra-passe com pelo menos 8 caracteres.
+- APIgoldrest/src/routes/auth.js cria restaurante e administrador numa única transação PostgreSQL.
+- O login inclui restaurante_id no JWT e devolve os dados do restaurante.
+- A moeda inicial do restaurante é AOA.
+
+CONFIGURAÇÃO:
+1. Abra a pasta GOLDREST no VS Code.
+2. Entre em APIgoldrest.
+3. Crie o ficheiro .env copiando .env.example.
+4. Preencha as credenciais de ligação ao Supabase e configure um JWT_SECRET forte.
+5. No terminal, dentro de APIgoldrest, execute: npm.cmd install
+6. Inicie a API com: npm.cmd run dev
+7. Abra o frontend com Live Server.
+
+SEGURANÇA:
+Não partilhe o ficheiro .env nem a palavra-passe do Supabase.
+O ficheiro .env original foi excluído deste ZIP para não expor as credenciais do banco.
+
+LIMITAÇÃO DO MATERIAL RECEBIDO:
+O ZIP original continha o frontend, server.js e a rota auth.js, mas não continha implementações das rotas de produtos, mesas, pedidos, funcionários, stock, vendas e definições, embora o frontend faça chamadas a esses endpoints. Essas funcionalidades não foram inventadas nesta atualização.
+O RLS do Supabase ainda não foi ativado. Antes disso, é necessário implementar a validação do JWT e aplicar restaurante_id nas consultas de cada endpoint.
